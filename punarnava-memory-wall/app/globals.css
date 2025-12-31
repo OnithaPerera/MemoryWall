@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* --- Define Custom Keyframes for Reverse Spin --- */
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@theme {
+  /* --- Custom Colors --- */
+  --color-saffron: #FF9933;
+  --color-emerald: #138808;
+  --color-gold: #FFD700;
+  --color-cream: #FFFAFA; /* Pure off-white */
+  --color-deepBlue: #000080;
+  --color-offWhite: #f8f8f2;
+
+  /* --- Custom Fonts --- */
+  --font-heading: var(--font-qasira);
+  --font-body: var(--font-poppins);
+
+  /* --- Custom Animations --- */
+  /* Clockwise spin */
+  --animate-spin-very-slow: spin 120s linear infinite;
+  /* NEW: Counter-clockwise spin linking to keyframes above */
+  --animate-spin-reverse-very-slow: spin-reverse 120s linear infinite;
+}
+
+/* --- Base Styles --- */
+body {
+  background-color: var(--color-cream);
+  color: var(--color-deepBlue);
+  font-family: var(--font-heading), sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Utilities --- */
+.sub-text {
+  color: var(--color-emerald);
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+
+/* --- Simplified Mandala Utility --- */
+/* We just define the image here. Position/size will be handled in layout.tsx */
+.bg-mandala {
+  background-image: url('/mandala.png');
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background-color: var(--color-cream); }
+::-webkit-scrollbar-thumb { background-color: var(--color-saffron); border-radius: 10px; border: 2px solid var(--color-cream); }
