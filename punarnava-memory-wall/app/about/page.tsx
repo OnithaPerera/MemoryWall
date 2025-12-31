@@ -34,20 +34,13 @@ export default function AboutPage() {
           and respected standards of the school.
         </p>
 
-        {/* Paragraph 2: Role */}
-        <p className="text-deepBlue/90 leading-relaxed mb-8 text-lg">
-          The Prefects' Body of St. Peter's College, Colombo 04, is a prominent part of the 
-          discipline board and plays a major role in every event conducted within the school premises.
-        </p>
 
-        {/* Paragraph 3: Legacy */}
         <p className="text-deepBlue/90 leading-relaxed mb-6 text-lg">
           With a legacy of over 95 years, the Prefects' Body of St. Peter's College has established 
           itself as a jewel among student leaders, continuing to give an opportunity to students who 
           strive to preserve the discipline and respected standards of the school.
         </p>
 
-        {/* Paragraph 4: Closing */}
         <p className="text-deepBlue/90 leading-relaxed text-lg font-medium">
           Playing a prominent part on the discipline board and being heavily involved in organizing 
           all events that take place within the school premises, the Prefects of St. Peter's College 
@@ -58,9 +51,9 @@ export default function AboutPage() {
         <div className="relative w-full h-64 md:h-80 bg-gray-200 rounded-xl overflow-hidden group">
             {/* REPLACE src with your actual image later */}
             <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold bg-gray-100">
-                [ Insert Group Photo Here ]
+                [ Insert Group Photo Here after the official one ]
             </div>
-            {/* Example if you have an image: 
+            {/* 
             <Image src="/history.jpg" alt="History" fill className="object-cover" /> 
             */}
         </div>
@@ -68,12 +61,18 @@ export default function AboutPage() {
 
       {/* Content Block 2: Event Info */}
       <section className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gold/30">
-            <h2 className="text-2xl font-heading font-bold text-emerald mb-4">Punarnava '26</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Punarnava '26 is not just an event; it is a celebration of our identity. 
-              Held annually to honor the incoming badge and bid farewell to the outgoing leaders, 
-              this event showcases the rich cultural heritage and the vibrant talent of our student leaders.
+        <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-lg border-t-4 border-emerald h-full flex flex-col justify-center">
+            <h2 className="text-3xl font-heading font-bold text-emerald mb-4">Punarnava '26</h2>
+            <p className="text-deepBlue/90 leading-relaxed mb-4">
+              Punarnava '26 is a heartfelt celebration of Indian heritage, bridging ancient wisdom with the vibrancy of the present. 
+              Rooted in the Sanskrit word for <span className="font-bold text-emerald">"rebirth"</span>, this event serves as the 
+              Annual Prefects' Day of St. Peter's College—a premier gathering for student leaders across the island.
+            </p>
+            
+            <p className="text-deepBlue/90 leading-relaxed">
+              More than just a showcase of culture, it is a day of fellowship, networking, and leadership education. 
+              Guided by over 95 years of excellence, the Prefects' Body invites the leaders of tomorrow to a space 
+              where tradition meets innovation, and the Peterite spirit of togetherness shines anew.
             </p>
         </div>
 
