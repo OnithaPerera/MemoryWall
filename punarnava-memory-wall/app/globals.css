@@ -18,6 +18,7 @@
   --color-cream: #FFFAFA; /* Pure off-white */
   --color-deepBlue: #000080;
   --color-offWhite: #f8f8f2;
+  --color-lightBlue: #0a62bc;
 
   /* --- Custom Fonts --- */
   --font-heading: var(--font-qasira);
