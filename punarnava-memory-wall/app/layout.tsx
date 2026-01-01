@@ -23,6 +23,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "The Memory Wall | Punarnava '26",
   description: "Capture the moment at Punarnava '26",
+  // 1. TELLS BROWSER UI (Address bar, etc.) TO STAY LIGHT
+  other: {
+    "color-scheme": "light",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${qasira.variable} ${poppins.variable}`}>
+    // 2. FORCES LIGHT MODE RENDERING
+    <html lang="en" style={{ colorScheme: 'light' }} className={`${qasira.variable} ${poppins.variable}`}>
       <body className="relative min-h-screen flex flex-col font-heading">
 
         {/* --- FIXED BACKGROUND --- */}
