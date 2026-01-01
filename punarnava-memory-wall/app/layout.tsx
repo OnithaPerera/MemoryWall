@@ -23,7 +23,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "The Memory Wall | Punarnava '26",
   description: "Capture the moment at Punarnava '26",
-  // 1. TELLS BROWSER UI (Address bar, etc.) TO STAY LIGHT
   other: {
     "color-scheme": "light",
   },
@@ -35,11 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 2. FORCES LIGHT MODE RENDERING
     <html lang="en" style={{ colorScheme: 'light' }} className={`${qasira.variable} ${poppins.variable}`}>
       <body className="relative min-h-screen flex flex-col font-heading">
 
-        {/* --- FIXED BACKGROUND --- */}
         <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
            <div className="absolute top-1/6 right-0 transform -translate-y-1/3 translate-x-1/2 w-[80vmax] h-[80vmax] bg-mandala bg-contain bg-center bg-no-repeat animate-spin-very-slow opacity-15"></div>
            <div className="absolute bottom-0 left-0 transform -translate-x-1/2 translate-y-1/3 w-[80vmax] h-[80vmax] bg-mandala bg-contain bg-center bg-no-repeat animate-spin-reverse-very-slow opacity-20"></div>
@@ -48,10 +45,8 @@ export default function RootLayout({
         {/* --- HEADER --- */}
         <header className="bg-cream shadow-md border-b-4 border-gold sticky top-0 z-50 font-body">
            
-           {/* Main Container - FLEX ROW for everything */}
            <div className="max-w-6xl mx-auto flex justify-between items-center py-2 px-3 md:py-3 md:px-6">
               
-              {/* 1. Logo (Smaller on Mobile: w-20) */}
               <Link href="/" className="relative h-10 w-20 md:h-16 md:w-60 block hover:opacity-90 transition-opacity shrink-0">
                  <Image 
                    src="/logo.png" 
@@ -64,7 +59,6 @@ export default function RootLayout({
               
               {/* 2. Middle Nav (Visible on Mobile & Desktop) */}
               <div className="flex items-center gap-3 px-2">
-                  {/* Mobile Text Links (Tiny text) */}
                   <div className="md:hidden flex items-center gap-2 text-[13px] font-bold text-deepBlue leading-tight">
                       <Link href="/about" className="hover:text-saffron whitespace-nowrap">About</Link>
                       <span className="text-gold">•</span>

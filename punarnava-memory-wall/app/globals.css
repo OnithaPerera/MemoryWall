@@ -2,10 +2,9 @@
 
 /* --- FORCE LIGHT MODE SYSTEM-WIDE --- */
 :root {
-  color-scheme: light; /* This tells iOS/Android to keep scrollbars & inputs light */
+  color-scheme: light; 
 }
 
-/* --- Define Custom Keyframes for Reverse Spin --- */
 @keyframes spin-reverse {
   from {
     transform: rotate(360deg);
@@ -20,7 +19,7 @@
   --color-saffron: #FF9933;
   --color-emerald: #138808;
   --color-gold: #FFD700;
-  --color-cream: #FFFAFA; /* Updated to hex to ensure consistency */
+  --color-cream: #FFFAFA; 
   --color-deepBlue: #000080;
   --color-offWhite: #f8f8f2;
   --color-lightBlue: #0a62bc;
@@ -32,13 +31,11 @@
   /* --- Custom Animations --- */
   /* Clockwise spin */
   --animate-spin-very-slow: spin 120s linear infinite;
-  /* NEW: Counter-clockwise spin linking to keyframes above */
   --animate-spin-reverse-very-slow: spin-reverse 120s linear infinite;
 }
 
 /* --- Base Styles --- */
 body {
-  /* !important forces the browser to ignore "Dark Mode" overrides */
   background-color: var(--color-cream) !important;
   color: var(--color-deepBlue) !important;
   font-family: var(--font-heading), sans-serif;
