@@ -1,10 +1,17 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import { Camera, ExternalLink } from 'lucide-react';
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Punarnava '26 | Memory Wall",
+  description: "Official memory wall for the Punarnava '26 the prefects' day of St. Peter's College, Colombo 04. Share and view memories from our Prefects' Day.",
+  keywords: ["Punarnava", "Punarnava '26", "Memory Wall", "Prefects Day", "St. Peters's College"],
+};
 
 // Setup Qasira (Local Font)
 const qasira = localFont({
@@ -19,14 +26,6 @@ const poppins = Poppins({
   weight: ["400", "500", "700"],
   variable: '--font-poppins'
 });
-
-export const metadata: Metadata = {
-  title: "The Memory Wall | Punarnava '26",
-  description: "Capture the moment at Punarnava '26",
-  other: {
-    "color-scheme": "light",
-  },
-};
 
 export default function RootLayout({
   children,
