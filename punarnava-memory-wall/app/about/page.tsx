@@ -84,23 +84,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership / Team Section */}
+      {/* Leadership / Team Section 
       <section className="text-center mb-16">
         <h2 className="text-3xl font-heading font-bold text-deepBlue mb-8">Our Leadership</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
+
             <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-saffron">
                 <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-gray-400">Img</div>
                 <h3 className="font-bold text-lg">Head Prefect</h3>
                 <p className="text-sm text-gray-500">Name Here</p>
             </div>
-            {/* Card 2 */}
+
             <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald">
                 <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-gray-400">Img</div>
                 <h3 className="font-bold text-lg">Deputy Head</h3>
                 <p className="text-sm text-gray-500">Name Here</p>
             </div>
-            {/* Card 3 */}
             <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-gold">
                 <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-gray-400">Img</div>
                 <h3 className="font-bold text-lg">Deputy Head</h3>
@@ -108,6 +107,7 @@ export default function AboutPage() {
             </div>
         </div>
       </section>
+      */}
 
     </div>
   );

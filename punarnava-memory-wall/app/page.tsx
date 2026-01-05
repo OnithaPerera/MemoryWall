@@ -70,7 +70,7 @@ export default function Home() {
     if (isLiked) {
         newLikedSet.delete(photo.id); 
     } else {
-        newLikedSet.add(photo.id);   
+        newLikedSet.add(photo.id);    
     }
     setLikedPhotos(newLikedSet);
     localStorage.setItem('liked_photos', JSON.stringify(Array.from(newLikedSet)));
@@ -121,13 +121,19 @@ export default function Home() {
             >
               <img src={photo.url} alt="Moment" className="w-full h-auto object-cover transform transition duration-500 group-hover:scale-105" loading="lazy" />
               
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white text-xs p-3 opacity-0 group-hover:opacity-100 transition flex justify-between items-end">
-                <p className="font-bold text-gold max-w-[70%] truncate">{photo.uploader_name || 'Guest'}</p>
+              {/* --- UPDATED OVERLAY SECTION --- */}
+              {/* New Class Logic: 
+                  opacity-100 (Visible by default on Mobile)
+                  md:opacity-0 (Hidden by default on Desktop)
+                  md:group-hover:opacity-100 (Visible on Hover on Desktop)
+              */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white text-xs p-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex justify-between items-end">
+                <p className="font-bold text-gold max-w-[70%] truncate drop-shadow-md">{photo.uploader_name || 'Guest'}</p>
                 
                 {/* LIKE BUTTON */}
                 <button 
                     onClick={(e) => handleLike(e, photo)}
-                    className={`flex items-center gap-1 bg-white/20 hover:bg-white/40 backdrop-blur-sm px-2 py-1 rounded-full transition-all active:scale-90 ${likedPhotos.has(photo.id) ? 'text-red-500 bg-white/90' : 'text-white'}`}
+                    className={`flex items-center gap-1 bg-black/40 hover:bg-white/40 backdrop-blur-md px-2.5 py-1.5 rounded-full transition-all active:scale-90 ${likedPhotos.has(photo.id) ? 'text-red-500 bg-white/90' : 'text-white'}`}
                 >
                     <Heart className={`w-3.5 h-3.5 ${likedPhotos.has(photo.id) ? 'fill-current' : ''}`} />
                     <span className="text-xs font-bold">{photo.likes || 0}</span>
@@ -140,7 +146,7 @@ export default function Home() {
 
       {/* Lightbox */}
       {selectedPhoto && (
-        <div className="fixed inset-0 z-[100] bg-deepBlue/95 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[100] bg-lightBlue/95 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
           <button onClick={(e) => { e.stopPropagation(); setSelectedPhoto(null); }} className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 p-2 rounded-full transition-colors z-[110]">
             <X className="w-8 h-8" />
           </button>

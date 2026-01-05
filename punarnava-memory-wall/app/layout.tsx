@@ -94,7 +94,7 @@ export default function RootLayout({
                 <div className="text-sm space-y-1">
                     <p>© Copyright <span className="text-saffron font-bold">PBSPC25/26</span>. All Rights Reserved.</p>
                     <p className="opacity-60 text-xs">
-                        Made with <span className="text-red-400">❤</span> by <span className="text-white font-bold">Onitha Perera</span>
+                        Made by <span className="text-white font-bold">Onitha Perera</span>
                     </p>
                 </div>
             </div>
